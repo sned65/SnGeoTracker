@@ -35,8 +35,12 @@ captures/
 # Intellij
 *.iml
 .idea/workspace.xml
+.idea/vcs.xml
 .idea/libraries
 .idea/dictionaries
+
+# Signing files
+.signing/
 
 # Keystore files
 *.jks
