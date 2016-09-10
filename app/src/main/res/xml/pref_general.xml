@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- NOTE: summary should be set to its value by the activity code. -->
+    <EditTextPreference android:key="pref_accuracy_threshold"
+                        android:title="@string/pref_accuracy_threshold"
+                        android:numeric="decimal"
+                        android:inputType="number"/>
+
+    <!-- NOTE: summary should be set to its value by the activity code. -->
+    <EditTextPreference android:key="pref_min_time"
+                        android:title="@string/pref_min_time"
+                        android:numeric="integer"
+                        android:inputType="number"/>
+
+    <!-- NOTE: summary should be set to its value by the activity code. -->
+    <EditTextPreference android:key="pref_min_distance"
+                        android:title="@string/pref_min_distance"
+                        android:numeric="decimal"
+                        android:inputType="number"/>
+
+    <!-- NOTE: summary should be set to its value by the activity code. -->
+    <MultiSelectListPreference android:key="pref_providers"
+                               android:title="@string/provider"
+                               android:dialogTitle="@string/provider"
+                               android:entries="@array/pref_providers"
+                               android:entryValues="@array/pref_providers"/>
+
+</PreferenceScreen>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:disableDependentsState="true"
+        android:key="pref_use_fused"
+        android:summary="@string/pref_fused_summary"
+        android:title="@string/pref_fused"/>
+
+    <!-- NOTE: summary should be set to its value by the activity code. -->
+    <MultiSelectListPreference
+        android:defaultValue="@array/pref_providers"
+        android:dependency="pref_use_fused"
+        android:dialogTitle="@string/provider"
+        android:entries="@array/pref_providers"
+        android:entryValues="@array/pref_providers"
+        android:key="pref_providers"
+        android:title="@string/provider"/>
+
+    <!-- NOTE: summary should be set to its value by the activity code. -->
+    <EditTextPreference
+        android:defaultValue="50"
+        android:inputType="number"
+        android:key="pref_accuracy_threshold"
+        android:numeric="decimal"
+        android:title="@string/pref_accuracy_threshold"/>
+
+    <!-- NOTE: summary should be set to its value by the activity code. -->
+    <EditTextPreference
+        android:inputType="number"
+        android:key="pref_route_accuracy_threshold"
+        android:numeric="decimal"
+        android:title="@string/pref_route_accuracy_threshold"/>
+
+    <!-- NOTE: summary should be set to its value by the activity code. -->
+    <EditTextPreference
+        android:defaultValue="5"
+        android:inputType="number"
+        android:key="pref_min_time"
+        android:numeric="integer"
+        android:title="@string/pref_min_time"/>
+
+    <!-- NOTE: summary should be set to its value by the activity code. -->
+    <EditTextPreference
+        android:defaultValue="10"
+        android:dependency="pref_use_fused"
+        android:inputType="number"
+        android:key="pref_min_distance"
+        android:numeric="decimal"
+        android:title="@string/pref_min_distance"/>
+
+    <!-- NOTE: summary should be set to its value by the activity code. -->
+    <ListPreference android:key="pref_map"
+                    android:title="@string/pref_title_map"
+                    android:dialogTitle="@string/pref_title_map"
+                    android:entries="@array/map_array"
+                    android:entryValues="@array/map_array"
+                    android:defaultValue="@string/map_google"/>
+
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="pref_show_all_columns"
+        android:summary="@string/pref_show_all_columns_summary"
+        android:title="@string/pref_show_all_columns"/>
+
+</PreferenceScreen>
