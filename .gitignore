@@ -30,7 +30,7 @@ captures/
 # so why do those XML files need to be versioned? Android Studio will also generate the rest
 # of /.idea when a developer creates a project using Check out from Version Control, so why
 # does anything in that folder need to be versioned?"
-/.idea
+.idea/
 *.iml
 
 # Signing files
