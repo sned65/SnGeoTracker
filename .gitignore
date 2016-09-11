@@ -25,11 +25,13 @@ build/
 captures/
 
 # Intellij User-specific configurations
+# From http://stackoverflow.com/questions/16736856/what-should-be-in-my-gitignore-for-an-android-studio-project
+# "The build.gradle will run on the developers's local when they first check out the project,
+# so why do those XML files need to be versioned? Android Studio will also generate the rest
+# of /.idea when a developer creates a project using Check out from Version Control, so why
+# does anything in that folder need to be versioned?"
+/.idea
 *.iml
-/.idea/workspace.xml
-/.idea/vcs.xml
-/.idea/libraries
-/.idea/dictionaries
 
 # Signing files
 .signing/
@@ -38,5 +40,7 @@ captures/
 *.jks
 
 # OS-specific files
+# OSX
 .DS_Store
+# Windows
 Thumbs.db
