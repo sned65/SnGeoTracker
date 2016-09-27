@@ -5,8 +5,8 @@ def dev = "-DEV"
 
 def getDate() {
     def date = new Date()
-    def formattedDate = date.format('yyyyMMddHHmmss')
-    //def formattedDate = date.format('yyyyMMdd')
+    //def formattedDate = date.format('yyyyMMddHHmmss')
+    def formattedDate = date.format('yyyyMMdd')
     return formattedDate
 }
 
@@ -33,9 +33,9 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.2.0'
-    compile 'com.google.android.gms:play-services-maps:9.4.0'
-    compile 'com.google.android.gms:play-services-location:9.4.0'
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.google.android.gms:play-services-maps:9.6.1'
+    compile 'com.google.android.gms:play-services-location:9.6.1'
     compile 'ru.yandex:yandexmapkit:2.4.2@aar'
     compile 'org.osmdroid:osmdroid-android:5.2@aar'
 }
