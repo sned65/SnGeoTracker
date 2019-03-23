@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 def dev = "-DEV"
 //def dev = ""
 
-def getDate() {
+static def getDate() {
     def date = new Date()
     def formattedDate = date.format('yyyyMMddHHmmss')
     //def formattedDate = date.format('yyyyMMdd')
@@ -11,13 +11,13 @@ def getDate() {
 }
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.2"
+    compileSdkVersion 26
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         applicationId "sne.geotracker"
         minSdkVersion 21
-        targetSdkVersion 24
+        targetSdkVersion 26
         versionCode 1
         //versionName "1.0"
         versionName getDate()+dev
@@ -31,11 +31,11 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.2.0'
-    compile 'com.google.android.gms:play-services-maps:9.4.0'
-    compile 'com.google.android.gms:play-services-location:9.4.0'
-    compile 'ru.yandex:yandexmapkit:2.4.2@aar'
-    compile 'org.osmdroid:osmdroid-android:5.2@aar'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.google.android.gms:play-services-maps:16.1.0'
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+    implementation 'ru.yandex:yandexmapkit:2.4.2@aar'
+    implementation 'org.osmdroid:osmdroid-android:5.2@aar'
 }
