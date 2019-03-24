@@ -17,6 +17,7 @@ import android.support.annotation.RequiresPermission;
 import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -70,10 +71,7 @@ public class GeoService extends Service
         _minDistance = Mix.getFloatPreference(prefs, SettingsFragment.PREFERENCE_MIN_DISTANCE, DEFAULT_MIN_DISTANCE);
 
         Set<String> default_providers = new HashSet<>();
-        for (String p : getResources().getStringArray(R.array.pref_providers))
-        {
-            default_providers.add(p);
-        }
+        Collections.addAll(default_providers, getResources().getStringArray(R.array.pref_providers));
         _providers = prefs.getStringSet(SettingsFragment.PREFERENCE_PROVIDERS, default_providers);
 
         Log.i(TAG, "onCreate() _accuracy = "+_accuracy+", _minTime = "+_minTime+", _minDistance = "+_minDistance+", _providers = "+_providers);

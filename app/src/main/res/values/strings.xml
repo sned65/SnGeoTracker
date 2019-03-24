@@ -7,6 +7,7 @@
     <string name="stop_tracking">Остановить запись</string>
     <string name="show_table">Показать таблицу</string>
     <string name="show_route">Показать маршрут</string>
+    <string name="home_road">Дорога домой</string>
     <string name="ok">ОК</string>
     <string name="error_no_location_perm">Приложение остановлено: не выдано разрешение на определение местоположения</string>
 
@@ -61,4 +62,11 @@
         <item>@string/map_yandex</item>
         <item>@string/map_osm</item>
     </string-array>
+
+    <!-- Home road -->
+    <string name="location">Координаты</string>
+    <string name="to_home">До дома</string>
+    <string name="to_work">До работы</string>
+    <string name="na">N/A</string>
+    <string name="distance_format">%7.3f &#x00B1; %.3f  км</string>
 </resources>

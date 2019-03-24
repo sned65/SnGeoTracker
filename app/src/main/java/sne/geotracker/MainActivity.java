@@ -79,6 +79,16 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+        Button homeRoadBtn = (Button) findViewById(R.id.btn_home_road);
+        homeRoadBtn.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                homeRoad();
+            }
+        });
+
         // create/upgrade DB
         DatabaseHelper.getInstance(this);
     }
@@ -256,5 +266,11 @@ public class MainActivity extends AppCompatActivity
             route = new Intent(this, RouteActivityGoogle.class);
         }
         startActivity(route);
+    }
+
+    private void homeRoad()
+    {
+        Intent hr = new Intent(this, HomeRoadActivity.class);
+        startActivity(hr);
     }
 }
